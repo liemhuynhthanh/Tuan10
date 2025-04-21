@@ -7,6 +7,7 @@ import "./App.css"
 import "./index.css";
 import CounterApp from "./pages/Counter_app";
 import TodoApp from "./pages/TodoList";
+import Theme from "./pages/Theme";
 
 const App = () => {
   const activeClass = "text-white bg-blue-600";
@@ -58,6 +59,15 @@ const App = () => {
         >
           Todo App
         </NavLink>
+        <NavLink
+          to="/theme"
+          className={({ isActive }) =>
+            `${baseClass} ${isActive ? activeClass : ""}`
+          }
+        >
+          Theme Toggle
+        </NavLink>
+
       </nav>
 
       {/* Router Outlet */}
@@ -67,6 +77,7 @@ const App = () => {
         <Route path="/step3" element={<Step3_Toolkit />} />
         <Route path="/counterapp" element={<CounterApp />} />
         <Route path="/todoapp" element={<TodoApp />} />
+        <Route path="/theme" element={<Theme />} />
       </Routes>
     </div>
   );

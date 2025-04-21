@@ -2,11 +2,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './counterSlice'; 
 import todoReducer from './todoSlice' // import reducer của counter hoặc các reducer khác
-
+import themeReducer from './themeSlice'; // import reducer của theme
 const store = configureStore({
   reducer: {
     counter: counterReducer,
-    todos: todoReducer, // Ví dụ reducer cho counter
+    todos: todoReducer,
+    theme: themeReducer, // Ví dụ reducer cho counter
   },
   
 });
