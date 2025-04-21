@@ -6,6 +6,7 @@ import Step3_Toolkit from "./pages/Step3_REduxToolkit";
 import "./App.css"
 import "./index.css";
 import CounterApp from "./pages/Counter_app";
+import TodoApp from "./pages/TodoList";
 
 const App = () => {
   const activeClass = "text-white bg-blue-600";
@@ -49,6 +50,14 @@ const App = () => {
           }
        >    Counter App
         </NavLink>
+        <NavLink
+          to="/todoapp"
+          className={({ isActive }) =>
+            `${baseClass} ${isActive ? activeClass : ""}`
+          } 
+        >
+          Todo App
+        </NavLink>
       </nav>
 
       {/* Router Outlet */}
@@ -57,6 +66,7 @@ const App = () => {
         <Route path="/step2" element={<Step2_Redux />} />
         <Route path="/step3" element={<Step3_Toolkit />} />
         <Route path="/counterapp" element={<CounterApp />} />
+        <Route path="/todoapp" element={<TodoApp />} />
       </Routes>
     </div>
   );
