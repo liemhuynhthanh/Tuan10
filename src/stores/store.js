@@ -3,13 +3,15 @@ import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './counterSlice'; 
 import todoReducer from './todoSlice' // import reducer của counter hoặc các reducer khác
 import themeReducer from './themeSlice';
-import cartReducer from './cartSlice' // import reducer của theme
+import cartReducer from './cartSlice' 
+import authReducer from './authSlice'
 const store = configureStore({
   reducer: {
     counter: counterReducer,
     todos: todoReducer,
     theme: themeReducer,
-    cart: cartReducer, // Ví dụ reducer cho counter
+    cart: cartReducer, 
+    auth: authReducer,//
   },
   
 });

@@ -9,7 +9,7 @@ import CounterApp from "./pages/Counter_app";
 import TodoApp from "./pages/TodoList";
 import Theme from "./pages/Theme";
 import Cart from "./pages/Cart";
-
+import Login from "./pages/Login";
 const App = () => {
   const activeClass = "text-white bg-blue-600";
   const baseClass =
@@ -76,6 +76,14 @@ const App = () => {
         >
           Cart
         </NavLink>
+        <NavLink
+          to="/login"
+          className={({ isActive }) =>
+            `${baseClass} ${isActive ? activeClass : ""}`
+          }
+        >
+          Login
+        </NavLink>
 
       </nav>
 
@@ -88,6 +96,7 @@ const App = () => {
         <Route path="/todoapp" element={<TodoApp />} />
         <Route path="/theme" element={<Theme />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );
