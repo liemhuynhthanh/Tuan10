@@ -5,6 +5,7 @@ import Step2_Redux from "./pages/Step2_Redux";
 import Step3_Toolkit from "./pages/Step3_REduxToolkit";
 import "./App.css"
 import "./index.css";
+import CounterApp from "./pages/Counter_app";
 
 const App = () => {
   const activeClass = "text-white bg-blue-600";
@@ -41,6 +42,13 @@ const App = () => {
         >
           Step 3: Redux Toolkit
         </NavLink>
+        <NavLink
+          to="/counterapp"
+          className={({ isActive }) =>
+            `${baseClass} ${isActive ? activeClass : ""}`
+          }
+       >    Counter App
+        </NavLink>
       </nav>
 
       {/* Router Outlet */}
@@ -48,6 +56,7 @@ const App = () => {
         <Route path="/step1" element={<Step1_UseReducer />} />
         <Route path="/step2" element={<Step2_Redux />} />
         <Route path="/step3" element={<Step3_Toolkit />} />
+        <Route path="/counterapp" element={<CounterApp />} />
       </Routes>
     </div>
   );
