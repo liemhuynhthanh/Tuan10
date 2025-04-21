@@ -8,6 +8,7 @@ import "./index.css";
 import CounterApp from "./pages/Counter_app";
 import TodoApp from "./pages/TodoList";
 import Theme from "./pages/Theme";
+import Cart from "./pages/Cart";
 
 const App = () => {
   const activeClass = "text-white bg-blue-600";
@@ -67,6 +68,14 @@ const App = () => {
         >
           Theme Toggle
         </NavLink>
+        <NavLink
+          to="/cart"
+          className={({ isActive }) =>
+            `${baseClass} ${isActive ? activeClass : ""}`
+          }
+        >
+          Cart
+        </NavLink>
 
       </nav>
 
@@ -78,6 +87,7 @@ const App = () => {
         <Route path="/counterapp" element={<CounterApp />} />
         <Route path="/todoapp" element={<TodoApp />} />
         <Route path="/theme" element={<Theme />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>
   );
